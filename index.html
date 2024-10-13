@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="KOI: Accelerating Online Imitation Learning via Hybrid Key-state Guidance.">
+  <meta name="keywords" content="Online Imitation Learning, Robotics Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KOI: Accelerating Online Imitation Learning via Hybrid Key-state Guidance</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/koi_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://gewu-lab.github.io//">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">KOI: Accelerating Online Imitation Learning via Hybrid Key-state Guidance</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/JingxianLu/" target="_blank">Jingxian Lu</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://xwinks.github.io/" target="_blank">Wenke Xia</a><sup>1,2,*,†</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.es/citations?user=dasL9V4AAAAJ&hl=zh-CN/" target="_blank">Dong Wang</a><sup>2,‡</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=cw3EaAYAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Zhigang Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=DQB0hqwAAAAJ&hl=zh-CN" target="_blank">Bin Zhao</a><sup>2,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dtaoo.github.io" target="_blank">Di Hu</a><sup>1,‡</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=en&oi=ao" target="_blank">Xuelong Li</a><sup>2,4</sup>
+            </span>
+          </div>
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Gaoling School of Artificial Intelligence, Renmin University of China</span>
+            <span class="author-block"><sup>2</sup>Shanghai Artificial Intelligence Laboratory</span>
+            <span class="author-block"><sup>3</sup>Northwestern Polytechnical University</span>
+            <span class="author-block"><sup>4</sup>Institute of Artificial Intelligence, China Telecom Corp Ltd</span>
+          </div>
+
+          <div class="is-size-7">
+            <span>* Equal contribution, † work is done during internship at Shanghai Artificial Intelligence Laboratory, ‡ Corresponding author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2408.02912"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2408.02912"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/GeWu-Lab/Keyframe_Online_Imitation"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Experiment videos -->
+ <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-cube">
+          <video poster="" id="cube" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cube.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-tape">
+          <video poster="" id="tape" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tape.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-rag">
+          <video poster="" id="rag" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rag.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-bin">
+          <video poster="" id="bin" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bin-picking-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-button">
+          <video poster="" id="button_press" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/button-press-topdown-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-drawer_open">
+          <video poster="" id="drawer_open" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/drawer-open-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-drawer_close">
+          <video poster="" id="drawer_close" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/drawer-close-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-door_open">
+          <video poster="" id="door_open" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/door-open-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-door_unlock">
+          <video poster="" id="door_unlock" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/door-unlock-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End experiment videos -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Online Imitation Learning struggles with the gap between extensive online exploration space and limited expert trajectories, hindering efficient exploration due to inaccurate reward estimation.
+            Inspired by the findings from cognitive neuroscience, we hypothesize that an agent could estimate precise task-aware reward for efficient online exploration, through decomposing the target task into the objectives of "what to do" and the mechanisms of "how to do".
+            In this work, we introduce the hybrid Key-state guided Online Imitation (KOI) learning approach, which leverages the integration of semantic and motion key states as guidance for reward estimation.
+            Initially, we utilize visual-language models to extract semantic key states from expert trajectory, indicating the objectives of "what to do". 
+            Within the intervals between semantic key states, optical flow is employed to capture motion key states to understand the mechanisms of "how to do".
+            By integrating a thorough grasp of hybrid key states, we refine the trajectory-matching reward computation, accelerating online imitation learning by task-aware exploration.
+            We evaluate not only the success rate of the tasks in the Meta-World and LIBERO environments, but also the trend of variance during online imitation learning, proving that our method is more sample efficient. We also conduct real-world robotic manipulation experiments to validate the efficacy of our method, demonstrating the practical applicability of our KOI method. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+            <p>
+                Online Imitation Learning has achieved significant success in various robotic manipulation tasks, driven by a reward function informed by expert demonstrations, is able to formulate policies via exploration.
+                However, the considerable gap between substantial online exploration space and limited expert trajectories challenges the estimation of exploration reward, which hinders the efficiency of online imitation learning in intricate environments.
+            </p>
+            <p>
+                Inspired by the findings from cognitive neuroscience, we propose the hybrid Key-state guided Online Imitation (KOI) learning approach, which effectively extracts the semantic and motion key states from expert trajectory to refine the reward estimation.
+            </p>
+            <div class="column ">
+                <img src="./static/images/pipeline.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+                <center>
+                  <p>Figure 1: The pipeline of our hybrid Key-state guided Online Imitation (KOI) learning framework.</p>
+                </center>
+              </div>
+            <p>
+                As demonstrated in Figure 1, we initially utilize the rich world knowledge of visual-language models to extract semantic key states from expert trajectory, clarifying the objectives of "what to do". Within intervals between semantic key states, optical flow is employed to identify essential motion key states to comprehend the dynamic transition to the subsequent semantic key state, indicating "how to do" the target task. 
+                By integrating both types of key states, we adjust the importance weight of expert trajectory states in OT-based reward estimation to empower efficient online imitation learning.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <h3>Simulation</h3>
+          <p>
+            To comprehensively evaluate our key-state guided method, we conducted experiments across 6 manipulation tasks from the <a href="https://meta-world.github.io/">Meta-world</a> and 3 more complex tasks from the <a href="https://libero-project.github.io/main.html">LIBERO</a>.
+            In offline imitation phase, we collected 1 demonstration and 50 demonstrations per task in the Meta-world and LIBERO to train a Behavior Cloning (BC) policy, respectively. For online imitation phase, we loaded pretrained BC policy and initialized critic network.
+          </p>
+          <p>
+            We compare our method with other approaches:
+            <p>1. <b>BC</b>, which represents the pretrained behavior cloning policy.</p>
+            <p>2. <b>UVD</b>, which utilize pretrained visual encoder R3M for task decomposition in image-goal reinforcement learning.</p>
+            <p>3. <b>RoboCLIP</b>, which leverages the pretrained video encoder S3D to estimate the task-aware reward function instead of the reward of each state.</p>
+            <p>4. <b>ROT</b>, which employs Optimal Transport to estimate the distance between exploration trajectory and expert demonstrations, which focus on fine-grained trajectory matching.</p>
+          </p>
+          <div class="column ">
+            <img src="./static/images/comparative.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/>
+            <center>
+              <p>Figure 2: The experiment results on Meta-World and LIBERO, with exploration 5 x 1e5 and 2 x 1e5 timesteps respectively. The shaded region represents normalized standard deviation across 3 seeds.</p>
+            </center>
+          </div>
+          <p>
+            As shown in Figure 2, our KOI approach achieves more efficient online imitation learning in all tasks by leveraging a thorough comprehension of both semantic and motion key states, providing a distinct advantage.
+            Furthermore,  KOI not only yields more efficient learning but also maintains greater stability, benefiting from the comprehensive guidance from the hybrid key states.
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <h3>Real-world</h3>
+          <div class="column ">
+            <img src="./static/images/real-world.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/>
+            <center>
+              <p>Table 1: The demonstrations and comparative results of our 3 real-world robotic manipulation tasks. The initial state of each task is represented in a lighter shade, while the completed state is depicted in a darker shade. The results indicate that our method achieves more efficient exploration and better overall performance.</p>
+            </center>
+          </div>
+          <p>
+            As shown in Table 1, We conduct real-world experiments using an XARM robot equipped with a Robotiq gripper. To comprehensively evaluate the performance, the entire imitation learning is divided into three stages: offline, online, and test. For each task, we collect 10 human expert demonstrations to train the Behavior Cloning (BC) policy during the offline phase and use only 1 expert demonstration to estimate reward during the online phase. All the evaluations are conducted at varying initial object positions.
+            Our method utilizes task-aware information to improve the reward estimation, thereby enhancing the agent's exploration efficiency and performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we propose the hybrid Key-state guided Online Imitation (KOI) learning method, which extracts the semantic and motion key states for trajectory-matching reward estimation for online imitation learning. 
+            By decomposing the target task into the objectives of "what to do" and the mechanisms of "how to do", we refine the trajectory-matching reward estimation to encourage task-aware exploration for efficient online imitation learning. The results from simulation environments and real-world scenarios prove the efficiency of our method.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{xia2023balanced,
+      title={Balanced Audiovisual Dataset for Imbalance Analysis},
+      author={Xia, Wenke and Zhao, Xu and Pang, Xincheng and Zhang, Changqing and Hu, Di},
+      journal={arXiv preprint arXiv:2302.10912},
+      year={2023}
+    }</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
