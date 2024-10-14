@@ -207,7 +207,7 @@
           <p>
             Online Imitation Learning struggles with the gap between extensive online exploration space and limited expert trajectories, hindering efficient exploration due to inaccurate reward estimation.
             Inspired by the findings from cognitive neuroscience, we hypothesize that an agent could estimate precise task-aware reward for efficient online exploration, through decomposing the target task into the objectives of "what to do" and the mechanisms of "how to do".
-            In this work, we introduce the hybrid Key-state guided Online Imitation (KOI) learning approach, which leverages the integration of semantic and motion key states as guidance for reward estimation.
+            In this work, we introduce the hybrid Key-state guided Online Imitation (KOI) learning method, which leverages the integration of semantic and motion key states as guidance for reward estimation.
             Initially, we utilize visual-language models to extract semantic key states from expert trajectory, indicating the objectives of "what to do". 
             Within the intervals between semantic key states, optical flow is employed to capture motion key states to understand the mechanisms of "how to do".
             By integrating a thorough grasp of hybrid key states, we refine the trajectory-matching reward computation, accelerating online imitation learning by task-aware exploration.
@@ -228,14 +228,14 @@
                 However, the considerable gap between substantial online exploration space and limited expert trajectories challenges the estimation of exploration reward, which hinders the efficiency of online imitation learning in intricate environments.
             </p>
             <p>
-                Inspired by the findings from cognitive neuroscience, we propose the hybrid Key-state guided Online Imitation (KOI) learning approach, which effectively extracts the semantic and motion key states from expert trajectory to refine the reward estimation.
+                Inspired by the findings from cognitive neuroscience, we propose the hybrid Key-state guided Online Imitation (KOI) learning method, which effectively extracts the semantic and motion key states from expert trajectory to refine the reward estimation.
             </p>
             <div class="column ">
                 <img src="./static/images/pipeline.png"
                 class="interpolation-image"
                 alt="Interpolate start reference image."/>
                 <center>
-                  <p>Figure 1: The pipeline of our hybrid Key-state guided Online Imitation (KOI) learning framework.</p>
+                  <p>Figure 1: The pipeline of our hybrid Key-state guided Online Imitation (KOI) learning method.</p>
                 </center>
               </div>
             <p>
@@ -258,7 +258,7 @@
             In offline imitation phase, we collected 1 demonstration and 50 demonstrations per task in the Meta-world and LIBERO to train a Behavior Cloning (BC) policy, respectively. For online imitation phase, we loaded pretrained BC policy and initialized critic network.
           </p>
           <p>
-            We compare our method with other approaches:
+            We compare our method with other methods:
             <p>1. <b>BC</b>, which represents the pretrained behavior cloning policy.</p>
             <p>2. <b>UVD</b>, which utilize pretrained visual encoder R3M for task decomposition in image-goal reinforcement learning.</p>
             <p>3. <b>RoboCLIP</b>, which leverages the pretrained video encoder S3D to estimate the task-aware reward function instead of the reward of each state.</p>
@@ -273,7 +273,7 @@
             </center>
           </div>
           <p>
-            As shown in Figure 2, our KOI approach achieves more efficient online imitation learning in all tasks by leveraging a thorough comprehension of both semantic and motion key states, providing a distinct advantage.
+            As shown in Figure 2, our KOI method achieves more efficient online imitation learning in all tasks by leveraging a thorough comprehension of both semantic and motion key states, providing a distinct advantage.
             Furthermore,  KOI not only yields more efficient learning but also maintains greater stability, benefiting from the comprehensive guidance from the hybrid key states.
           </p>
         </div>
