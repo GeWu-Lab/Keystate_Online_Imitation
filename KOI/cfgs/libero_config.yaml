@@ -1,0 +1,49 @@
+defaults:
+  - _self_
+  - agent: koi_libero
+  - suite: liberoenv
+  - override hydra/launcher: submitit_local
+
+# Root Dir
+root_dir: 'path/to/dir/'
+
+# replay buffer
+replay_buffer_size: 150000
+replay_buffer_num_workers: 1
+nstep: 3
+batch_size: 256 # 128
+# misc
+seed: 2
+device: cuda
+save_video: true
+save_train_video: false
+use_tb: true
+
+
+# experiment
+exp_name: 'koi'
+keyidx: [1]
+
+# expert dataset
+num_demos: 5 # 50 for offline and 5 for online
+obs_type: 'pixels'
+expert_dataset: '${root_dir}/expert_demos/${suite.name}/${suite.libero_task.task_name}/expert_demos.hdf5'
+
+# Load weights
+load_bc: true
+# Weights
+bc_weight: '${root_dir}/weights/${suite.name}/${suite.libero_task.task_name}/bc.pt'
+
+# Train with BC loss
+bc_regularize: false
+bc_weight_type: 'qfilter' # linear, qfilter
+
+hydra:
+  run:
+    dir: ./exp_local/${suite.libero_task.task_name}/${exp_name}_${seed}
+  sweep:
+    dir: ./exp_local/
+    subdir: ${hydra.job.num}
+  launcher:
+    tasks_per_node: 1
+    nodes: 1

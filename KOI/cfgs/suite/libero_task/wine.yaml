@@ -1,0 +1,6 @@
+
+defaults:
+  - params
+  - _self_
+
+task_name: put_the_wine_bottle_on_top_of_the_cabinet

@@ -1,0 +1,35 @@
+# @package suite
+defaults:
+  - _self_
+  - libero_task: plate
+
+suite: liberoenv
+
+name: 'liberoenv'
+
+# task settings
+frame_stack: 1
+action_repeat: 1
+discount: 0.99
+hidden_dim: 1024
+obs_shape: [3,128,128]
+action_shape: [7,]
+
+# train settings
+num_train_frames: 510000
+num_train_frames_bc: 110000
+num_seed_frames: 24000
+
+# eval
+eval_every_frames: 10000
+num_eval_episodes: 50
+
+# snapshot
+save_snapshot: true
+
+task_make_fn:
+  _target_: suite.liberoenv.make
+  name: ${suite.libero_task.task_name}
+  frame_stack: ${suite.frame_stack}
+  action_repeat: ${suite.action_repeat}
+
