@@ -13,12 +13,12 @@ ___
 
 This is the PyTorch code of our paper: __KOI: Accelerating Online Imitation Learning via Hybrid Key-state Guidance__.
 
-In this work, we propose the hybrid Key-state guided Online Imitation (KOI) learning approach, which estimates precise task-aware reward for efficient online exploration, through decomposing the target task into the objectives of `what to do` and the mechanisms of `how to do`.
+In this work, we propose the hybrid Key-state guided Online Imitation (KOI) learning method, which estimates precise task-aware reward for efficient online exploration, through decomposing the target task into the objectives of `what to do` and the mechanisms of `how to do`.
 
 ![image](./pipeline.png)
 
 As shown, we initially utilize the rich world knowledge of visual-language models to extract semantic key states from expert trajectory, clarifying the objectives of `what to do`. Within intervals between semantic key states, optical flow is employed to identify essential motion key states to comprehend the dynamic transition to the subsequent semantic key state, indicating `how to do` the target task. By integrating both types of key states, we adjust the importance weight of expert trajectory states in OT-based reward estimation to empower efficient online imitation learning.
-            
+
 
 
 ## Download expert demonstrations, weights [[link]](https://drive.google.com/file/d/1WDkLMIG-Wb-UqoUOvJ8ADMKlLdtYF1jz/view?usp=drive_link)
