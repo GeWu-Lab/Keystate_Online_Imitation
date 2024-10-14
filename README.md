@@ -4,7 +4,7 @@ Authors: [Jingxian Lu](https://github.com/JingxianLu)\*, [Wenke Xia](https://xwi
 
 Accepted By: __2024 Conference on Robot Learning (CoRL)__
 
-Resources:[[Project Page](https://gewu-lab.github.io/KOI/)],[[Arxiv](https://arxiv.org/abs/2408.02912)]
+Resources:[[Project Page](https://gewu-lab.github.io/Keystate_Online_Imitation/)],[[Arxiv](https://arxiv.org/abs/2408.02912)]
 
 If you have any questions, please open an issue or send an email to jingxianlu1122@gmail.com.
 ___
