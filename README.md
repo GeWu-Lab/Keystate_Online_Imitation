@@ -34,15 +34,16 @@ Then, extract the files and place the `expert_demos` and `weights` folders in `$
 
 This code is tested in Ubuntu 18.04, pytorch 1.12.1+cu113
 
-__Install dependencies__
+__Install the requirements__
 
-- Install the requirements
 
 ```
 pip install -r requirements.txt
 ```
 
-- If you have problem installing environment libraries [Meta-World](https://github.com/Farama-Foundation/Metaworld/) and [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO), please refer to their official documents.
+If you have problem installing environment libraries [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO), please refer to its official documents.
+
+For a fair comparison with [ROT](https://github.com/siddhanthaldar/ROT/), we conduct experiments in Meta-World suite they provided, which modified the simulation for pixel input. Please follow their instructions to setup Gym-Robotics and Meta-World libraries.  
 
 ## Train
 __Meta-World__ 

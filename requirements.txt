@@ -62,7 +62,6 @@ google-pasta==0.2.0
 grpcio==1.62.0
 gym==0.25.2
 gym-notices==0.0.8
--e git+ssh://git@github.com/Farama-Foundation/Gym-Robotics.git@395d5aa1646ccddbc0196658dd78b03edcb9b3e0#egg=gym_robotics
 gymnasium==0.29.1
 h5py==3.10.0
 huggingface-hub==0.25.2
@@ -108,7 +107,6 @@ matplotlib==3.5.3
 matplotlib-inline==0.1.6
 mdit-py-plugins==0.4.0
 mdurl==0.1.2
--e git+ssh://git@github.com/rlworkgroup/metaworld.git@b0b66d1f56bbe6c1a4f3df0eb64a6dc3c38429b3#egg=metaworld
 mistune==3.0.2
 moviepy==1.0.3
 mujoco==3.1.2
@@ -165,7 +163,6 @@ pytz==2024.1
 PyWavelets==1.4.1
 PyYAML==6.0.1
 pyzmq==25.1.2
--e git+https://github.com/facebookresearch/r3m.git@b2334e726887fa0206962d7984c69c5fb09cceab#egg=r3m
 referencing==0.33.0
 regex==2023.12.25
 requests==2.31.0
@@ -219,7 +216,6 @@ transforms3d==0.4.1
 trimesh==4.2.4
 typing_extensions==4.10.0
 urllib3==2.2.1
--e git+https://github.com/facebookresearch/vip.git@f98ca99bcaf9f7e00ccd1c99735d77f55c53dd69#egg=vip
 wandb==0.13.1
 wcwidth==0.2.13
 webencodings==0.5.1
